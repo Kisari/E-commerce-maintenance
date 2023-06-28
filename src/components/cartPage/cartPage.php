@@ -1,4 +1,17 @@
 <?php session_start(); ?>
+<?php
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['accounttype'] != 'customer') {
+        echo <<<CODE
+                <script type="text/javascript">  
+                    window.location.href="../noPermission/noPermission.html";
+                </script>
+            CODE;
+    }
+} else {
+    header("url=../loginPage/login.php");
+}
+?>
 <?php require_once('../../../server/classes/order.php') ?>
 <?php require_once('../../../server/classes/product.php') ?>
 <?php require_once('../../../server/readFromFile.php') ?>
@@ -33,19 +46,6 @@ $userList = readFromFile("accounts.txt");
         require_once('../header/header.php')
         ?>
     </header>
-    <?php
-    if (isset($_SESSION['user'])) {
-        if ($_SESSION['accounttype'] != 'customer') {
-            echo <<<CODE
-                <script type="text/javascript">  
-                window.location.href="../noPermission/noPermission.html";
-            </script>
-            CODE;
-        }
-    } else {
-        header("url=../loginPage/login.php");
-    }
-    ?>
 
     <?php
     if (isset($_POST['productList'])) {
@@ -87,7 +87,7 @@ $userList = readFromFile("accounts.txt");
     }
     ?>
     <main class="p-3 d-flex flex-wrap flex-column flex-md-row justify-content-between">
-        <section class="col-12 col-md-3 d-flex flex-column">
+        <section class="col-12 col-md-3 d-flex flex-column flex-wrap">
             <div class="p-4 border border-2">
                 <h2 class="m-0">Price Details</h2>
                 <div class="py-4 my-3 border-bottom border-top border-1 d-flex flex-column fw-bold">
@@ -135,7 +135,10 @@ $userList = readFromFile("accounts.txt");
                                 <small class="p-0"> Sell by Minh</small>
                                 <p class="fw-bold fs-4 my-2">$1377</p>
                                 <div class="d-flex flex-row">
-                                    <button class="btn btn-warning p-2">Save for later</button>
+                                    <!-- <button class="btn btn-warning p-2">Save for later</button> -->
+                                    <button class="btn btn-warning p-2" data-bs-toggle="popover" title="This option is not avaiable" data-bs-html="true">
+                                        Save for later
+                                    </button>
                                     <button class="btn btn-danger p-2 ms-4">Remove</button>
                                 </div>
                             </div>
@@ -165,7 +168,6 @@ $userList = readFromFile("accounts.txt");
 <script src="/src/assets/scripts/cartPage.js"></script>
 <script>
     function removeProduct(id) {
-        console.log(id);
         var currentStorage = JSON.parse(localStorage.getItem("cart"));
         if (currentStorage.length == 1) {
             localStorage.removeItem("cart");
@@ -198,7 +200,7 @@ $userList = readFromFile("accounts.txt");
                         }
                     });
                     localStorage.setItem("cart", JSON.stringify(currentStorage));
-                    location.reload();
+                    // location.reload();
                 }
             })
             plus[i].addEventListener('click', function() {
@@ -209,7 +211,7 @@ $userList = readFromFile("accounts.txt");
                     }
                 });
                 localStorage.setItem("cart", JSON.stringify(currentStorage));
-                location.reload();
+                // location.reload();
             })
 
         }
@@ -255,7 +257,9 @@ $userList = readFromFile("accounts.txt");
                                         <small class="p-0"> Sell by ${product.vendorName}</small>
                                         <p class="fw-bold fs-4 my-2">${product.unitPrice}</p>
                                         <div class="d-flex flex-column flex-sm-row">
-                                            <button class="btn btn-warning p-2">Save for later</button>
+                                            <button class="btn btn-warning p-2" data-bs-toggle="popover" title="This option is not avaiable" data-bs-html="true">
+                                            Save for later
+                                            </button>
                                             <button class="btn btn-danger p-2 ms-sm-4 my-sm-0 my-3" onclick="removeProduct(${product.productID});">Remove</button>
                                         </div>
                                     </div>

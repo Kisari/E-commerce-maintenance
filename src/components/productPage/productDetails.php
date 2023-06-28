@@ -105,10 +105,10 @@ if (isset($_SESSION['user'])) {
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center my-5">
-                                    <button class="w-50 btn btn-outline-warning rounded-3" onclick="addToCart()">
-                                        <img class="me-4" src="../../../public/img/add-to-cart.png" alt="Add-to-cart icon" style="width:30px;height:30px">Add to cart
+                                    <button class="w-50 btn btn-outline-success rounded-3" onclick="addToCart()">
+                                        <img class="me-3" src="../../../public/img/add-to-cart.png" alt="Add-to-cart icon" style="width:28px;height:28px"><b class="text-center">Add to cart</b>
                                     </button>
-                                    <button class="w-25 btn btn-success ms-5 rounded-3">Buy now</button>
+                                    <button class="w-25 btn btn-success ms-5 rounded-3" onclick="addToCart();navigateToCart();">Buy now</button>
                                 </div>
                             </div>
                         </div>
@@ -164,6 +164,12 @@ if (isset($_SESSION['user'])) {
                 <?php endif ?>
             <?php endif ?>
         <?php endforeach; ?>
+    }
+</script>
+
+<script>
+    function navigateToCart() {
+        window.location.href = `../cartPage/cartPage.php`;
     }
 </script>
 

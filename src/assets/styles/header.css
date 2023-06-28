@@ -1,13 +1,4 @@
-/* .navbar-nav>li {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-@media (min-width: 992px) {
-    .navbar li {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-} */
+
 .slogan {
     font-family: 'Bitter', serif;
 }
@@ -23,10 +14,6 @@ body {
     box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 }
 
-/* .search img {
-    width: 25px;
-    height: 25px;
-} */
 
 .search input {
 
@@ -38,7 +25,7 @@ body {
 .search input:focus {
 
     box-shadow: none;
-    border: 2px solid blue;
+    border: 2px solid #dc3545;
 
 
 }
@@ -58,7 +45,7 @@ body {
     right: 5px;
     height: 40px;
     width: 110px;
-    background: blue;
+    background: #dc3545;
 
 }
 

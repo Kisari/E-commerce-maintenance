@@ -10,7 +10,7 @@
   position: relative;
   border-radius: 50%;
   aspect-ratio: 1;
-  border: 10px solid #60B466;
+  border: 10px solid #00cba9;
 }
 
 #photo {
@@ -29,7 +29,7 @@
 
 #profile-pic-change {
   width: 15%;
-  background-color: #60B466;
+  background-color: #00cba9;
 }
 
 .profile-pic-btn {
@@ -53,7 +53,7 @@
 .info {
   padding-left: 10%;
   /* line-height: 10px; */
-  color: #60B466;
+  color: #00cba9;
   flex-direction: column;
   justify-content: center;
   height: auto;
@@ -71,7 +71,6 @@
 #edit-btn {
   height: 38px;
   color: black;
-  background-color: #60B466;
   display: flex;
   border: none;
 }
@@ -150,7 +149,7 @@
 
 /* Add a red background color to the cancel button */
 .form-container .confirm {
-  background-color: #60B466;
+  background-color: #00cba9;
 }
 
 .form-container .cancel {
@@ -173,8 +172,8 @@
 }
 
 #photo{
-  width: 300px;
-  height: 337px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   display:block;
   margin:auto;
@@ -194,7 +193,4 @@
     display: block;
   }
   
-  .avaimgdiv{
-    width: 200px;
-  }
 }

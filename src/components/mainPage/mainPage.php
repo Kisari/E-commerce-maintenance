@@ -80,37 +80,43 @@
                     <div class="border border-1 rounded-circle p-2" style="width: 50px; height: 50px;">
                         <img src="../../../public/img/banner-icon1.png" class="icon-40 img-fluid" alt="Sale">
                     </div>
-                    <p class="mt-2 w-100">Hot Time for sale</p>
+                    <p class="mt-2 w-100"><b>Hot Time for sale</b></p>
+                    <p class="w-100 px-1 px-md-3"><b style="color: #dc3545">Best deals</b> for the specific time only with limited products and services</p>
                 </div>
                 <div class="col-4 col-lg-2 d-flex flex-column align-items-center justify-content-center text-center h-100 py-2">
                     <div class="border border-1 rounded-circle p-2" style="width: 50px; height: 50px;">
                         <img src="../../../public/img/banner-icon2.png" class="icon-40 img-fluid" alt="Cheap">
                     </div>
-                    <p class="mt-2 w-100">Cheapest price</p>
+                    <p class="mt-2 w-100"><b>Cheapest price</b></p>
+                    <p class="w-100 px-1 px-md-3">We provide the cheapest items from any providers with discount</p>
                 </div>
                 <div class="col-4 col-lg-2 d-flex flex-column align-items-center justify-content-center text-center h-100 py-2">
                     <div class="border border-1 rounded-circle p-2" style="width: 50px; height: 50px;">
                         <img src="../../../public/img/banner-icon3.png" class="icon-40 img-fluid" alt="Sale">
                     </div>
-                    <p class="mt-2 w-100">Free ship</p>
+                    <p class="mt-2 w-100"><b>Free ship</b></p>
+                    <p class="w-100 px-1 px-md-3">Free ship in <b style="color: #00cba9">some cities</b> with the requirement price</p>
                 </div>
                 <div class="col-4 col-lg-2 d-flex flex-column align-items-center justify-content-center text-center h-100 py-2">
                     <div class="border border-1 rounded-circle p-2" style="width: 50px; height: 50px;">
                         <img src="../../../public/img/banner-icon4.png" class="icon-40 img-fluid" alt="Sale">
                     </div>
-                    <p class="mt-2 w-100">Best quality goods</p>
+                    <p class="mt-2 w-100"><b>Best quality goods</b></p>
+                    <p class="w-100 px-1 px-md-3">Qualified products with materials laboratory <b style="color: #00cba9">testing</b> before publishing</p>
                 </div>
                 <div class="col-4 col-lg-2 d-flex flex-column align-items-center justify-content-center text-center h-100 py-2">
                     <div class="border border-1 rounded-circle p-2" style="width: 50px; height: 50px;">
                         <img src="../../../public/img/banner-icon5.png" class="icon-40 img-fluid" alt="Sale">
                     </div>
-                    <p class="mt-2 w-100">Reasonable price- Hot deal</p>
+                    <p class="mt-2 w-100"><b>Reasonable price- Hot deal</b></p>
+                    <p class="w-100 px-1 px-md-3">Hot deal with reasonable price time-to-time</p>
                 </div>
                 <div class="col-4 col-lg-2 d-flex flex-column align-items-center justify-content-center text-center h-100 py-2">
                     <div class="border border-1 rounded-circle p-2" style="width: 50px; height: 50px;">
                         <img src="../../../public/img/banner-icon6.png" class="icon-40 img-fluid" alt="Sale">
                     </div>
-                    <p class="mt-2 w-100">International supplier</p>
+                    <p class="mt-2 w-100"><b>International supplier</b></p>
+                    <p class="w-100 px-1 px-md-3">Providers all over the world with <b style="color: #dc3545">trustworthy supplier</b></p>
                 </div>
             </div>
         </div>
@@ -118,7 +124,7 @@
             <div class="d-flex flex-wrap justify-content-around px-2 py-4">
                 <?php foreach ($productList as $cur) : ?>
                     <?php if (!empty($cur)) : ?>
-                        <div class="card mx-2 my-4 col-10 col-sm-8 col-md-5 col-lg-3">
+                        <div class="card mx-2 my-4 col-12 col-sm-10 col-md-5 col-lg-3">
                             <img src="../../<?= $cur->img ?>" class="card-img-top" alt="<?= $cur->productDes ?>">
                             <div class="card-body">
                                 <h5 class="card-title text-center"><?= $cur->productName ?></h5>

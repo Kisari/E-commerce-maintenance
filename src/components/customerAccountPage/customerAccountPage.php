@@ -85,10 +85,6 @@ if (isset($_FILES['avt-change-img']) && $_FILES['avt-change-img']['name'] != "")
     }
     ?>
 
-    <?php #if($_SESSION['user'] == $account->username) :
-    ?>
-    <!-- <div></div> -->
-    <?php #endif 
     ?>
     <style>
         <?php include '../../../src/assets/styles/customerAccountPage.css'; ?><?php include '../../../public/bootstrap/css/bootstrap.min.css'; ?>
@@ -98,24 +94,21 @@ if (isset($_FILES['avt-change-img']) && $_FILES['avt-change-img']['name'] != "")
             <div class="row">
                 <div class="col-12 col-md-4 card shadow p-3 mb-5 bg-body rounded d-flex flex-column align-items-center">
                     <form class="col-12" name="profile-pic" id="profile-pic" method="post" action="" enctype="multipart/form-data">
-                        <div class="col-12 position-relative rounded-circle">
-
+                        <div class="col-12 position-relative p-4">
                             <img class="img-fluid text-center" name="fileToUpload" alt="profile pic" id="photo" src=' <?= $avaimg ?>'>
-                            <div class="position-absolute image-upload bottom-0 end-0" style="width:40px; height:40px;">
-                                <label for="file-input" style="width:40px; height:40px;">
+                            <div class="position-absolute image-upload rounded-circle border border-2 bottom-0 end-0 d-flex justify-content-center align-items-center" style="width:40px; height:40px;">
+                                <label for="file-input" style="width:30px; height:30px;">
                                     <img src="../../../public/img/camera.png" alt="change ava button" class="img-fluid" id="camera-btn">
                                 </label>
                                 <input name="avt-change-img" class="d-none" id="file-input" type="file" onchange="loadFile(event)">
                             </div>
                         </div>
                         <div class="col-12 profile-pic-btn">
-                            <!-- <button type="button" class="btn btn-primary change-ava" onclick="refreshPage()">Confirm changes</button> -->
-                            <button class="btn btn-primary" type="button">
+                            <button class="btn btn-success" type="button">
                                 <input type="submit" value="Confirm changes" id="submit-btn" />
                             </button>
                         </div>
                     </form>
-
                 </div>
                 <div class="col">
                     <div class="info d-flex ">
@@ -164,9 +157,9 @@ if (isset($_FILES['avt-change-img']) && $_FILES['avt-change-img']['name'] != "")
                         ?>
 
                         <div class="button-container position-relative">
-                            <button id="edit-btn" class="btn btn-primary position-absolute top-0 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#ChangeInfoModal">
+                            <button id="edit-btn" class="btn btn-success position-absolute top-0 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#ChangeInfoModal">
                                 <img src="../../../public/img/edit.png" alt="edit-info">
-                                <div>&nbsp;&nbsp;Edit my profile</div>
+                                <div style="color: #ffffff">&nbsp;&nbsp;Edit my profile</div>
                             </button>
                             <form method="post">
                                 <?php

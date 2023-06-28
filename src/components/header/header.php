@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="d-flex flex-column" style="background-color: #60b466;">
+    <div class="d-flex flex-column" style="background-color: #00cba9;">
         <?php
         if (isset($_SESSION['user'])) {
             if ($_SESSION['accounttype'] == 'customer') {
@@ -91,10 +91,10 @@
                 echo <<<CODE
                                 <div class="d-grid gap-2 d-md-block d-flex flex-sm-row flex-column">
                                     <a href="../registerPage/register.php">
-                                        <button class="btn text-white" type="button" style="background-color: #60b466;">Register</button>
+                                        <button class="btn text-white" type="button" style="background-color: #00cba9;">Register</button>
                                     </a>
                                     <a href="../loginPage/login.php">
-                                        <button class="btn text-white" type="button" style="background-color: #60b466;">Login</button>
+                                        <button class="btn text-white" type="button" style="background-color: #00cba9;">Login</button>
                                     </a>
                                 </div>
                         CODE;
@@ -108,12 +108,12 @@
                     echo <<<CODE
                                 <div class="d-grid gap-2 d-md-block d-flex flex-row justify-content-center align-items-center">
                                     <a href="../customerAccountPage/customerAccountPage.php">
-                                        <button class="btn text-white" type="button" style="background-color: #60b466;">$username</button>
+                                        <button class="btn text-white" type="button" style="background-color: #00cba9;">$username</button>
                                     </a>
                                 CODE;
                     echo <<<CODE
                                     <a href='../../../server/logOut.php'>
-                                        <button class="btn text-warning" style="background-color: #60b466;" type="button" onclick="localStorage.clear();">Log out</button>
+                                        <button class="btn text-warning" style="background-color: #00cba9;" type="button" onclick="localStorage.clear();">Log out</button>
                                     </a>
                                 </div>
                                 CODE;
@@ -141,11 +141,11 @@
                                     <form class="search" onsubmit="navigateToSearchPage();return false">
                                         <img src="../../../public/img/search-icon.png" alt="Search icon">
                                         <input type="text" class="form-control search-input" placeholder="Search desired products">
-                                        <button class="btn btn-primary" type="submit">Search</button>
+                                        <button class="btn btn-danger" type="submit" style="background-color: #ff3456;">Search</button>
                                     </form>
                                 </div>
                             </div>
-                        <button type="button" class="btn btn-lg btn-danger ms-md-3" data-bs-toggle="popover" title="How to search ?" data-bs-content="Give the product name in the search <br/> Or price range in format 'from,to' to find appropriate products <br/> Other invalid context will be ignored" data-bs-html="true">
+                        <button type="button" class="btn btn-lg btn-danger ms-md-3" style="background-color: #ff3456;" data-bs-toggle="popover" title="How to search ?" data-bs-content="Give the <b>PRODUCT NAME</b> in the search <br/> Or price range in format <b>'FROM,TO'</b> to find appropriate products <br/> Other invalid context will be ignored" data-bs-html="true">
                             <div class="rounded-circle p-1 d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;"> 
                                 <img class="img-fluid w-100 h-100" src="../../../public/img/question.png" alt="Search icon">
                             </div>
@@ -154,7 +154,7 @@
                         <a href="../cartPage/cartPage.php" class="col-2 col-md-2 shop-icon d-flex justify-content-center">
                             <div class="position-relative">
                                 <img src="../../../public/img/add-to-cart-white.png" alt="add to cart icon">
-                                <span class="position-absolute top-100 translate-middle badge rounded-pill bg-danger cart-size">0</span>
+                                <span class="position-absolute top-100 translate-middle badge rounded-pill bg-danger cart-size" style="background-color: #ff3456;">0</span>
                             </div>
                         </a>
                     </div>

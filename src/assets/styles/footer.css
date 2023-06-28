@@ -1,14 +1,24 @@
-footer {
-    background-color: #60b466;
-    color: #f0f0f0;
+footer{
     font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
+.footer-link{
+    padding: 0;
+    text-align: start;
+}
+
+.footer-author > p{
+    color: #f0f0f0;
+    text-align: start;
+    padding-left: 32px;
 }
 
 
 .footer-link * {
-    background-color: #60b466;
     color: #f0f0f0;
     border: none;
+    background-color: #00cba9;
 }
 
 .footer-link li a {
@@ -25,4 +35,14 @@ footer {
 .icon {
     width: 40px;
     height: 40px;
+}
+
+#input-email{
+    border-radius: 25px;
+    text-indent: 10px;
+    width: 300px;
+    height: 50px;
+}
+#input-email::placeholder{
+    font-size: 1.2rem;
 }
